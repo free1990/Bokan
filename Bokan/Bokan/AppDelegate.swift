@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let rootVC = RootViewController()
+        // ???此处设置背景色可以生效，RootViewController不行
+        rootVC.view.backgroundColor = UIColor.white
+        window?.rootViewController = rootVC
+        
         return true
     }
 
